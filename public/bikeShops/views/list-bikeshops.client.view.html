@@ -1,0 +1,31 @@
+<section data-ng-controller="BikeshopsController" data-ng-init="findOne()">
+	<div class="page-header">
+		<h1>Lista de tiendas bicicletas</h1>
+	</div>
+	<div class="list-group">
+		
+		<!-- map -->
+		
+		<map style="height: 800px; width: 800px;" center="[37.391408, -5.994451]" zoom="13">
+          <bicycling-layer></bicycling-layer>
+  			<marker ng-repeat='bikeshop in bikeshops' position='[{{bikeShop.lat}},{{bikeShop.lon}}]' visible="true" on-click="gotolink(event,bikeshop)">
+  		</marker>
+  		
+		</map>
+
+		<a data-ng-repeat="bikeshop in bikeshops" data-ng-href="#!/bikeshops/{{bikeshop._id}}" class="list-group-item">
+
+			<h4 class="list-group-item-heading" data-ng-bind="bikeshop.title"></h4>
+
+			<p class="list-group-item-text" data-ng-bind="bikeshop.content"></p>
+			<p class="list-group-item-text" data-ng-bind="bikeshop.lat"></p>
+			<p class="list-group-item-text" data-ng-bind="bikeshop.lon"></p>
+		</a>
+
+	</div>
+
+	
+	<div class="alert alert-warning text-center" data-ng-if="bikeshops.$resolved && !bikeshops.length">
+	No hay comentarios<a href="/#!/bikeshops/create">  crea el primero</a>
+	</div>
+</section>

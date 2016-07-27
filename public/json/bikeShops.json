@@ -1,0 +1,84 @@
+[
+
+       {
+        "name":"BICI4CITY",            
+        "id":"001",
+        "address":"Calle Peral, 6, 41002 Sevilla",
+        "phone":"954229883",
+        "lat":"37.400755", 
+        "long":"-5.993228"
+       },
+	{
+		"name":"PASEOBICI: Bicicletas de Segunda ",            
+        "id":"002",
+        "address":"Calle Resolana, 24, 41002 Sevilla",
+        "phone":"605441987",
+        "lat": "37.403400",
+        "long": "-5.991283"
+	},
+	{
+		"name":"Santa Cleta",            
+        "id":"003",
+        "address":"Calle Fray Diego de Cádiz, 24, 41003 Sevilla",
+        "phone":"955294284",
+        "lat": "37.400697",
+        "long": "-5.987010"
+	},
+	{
+		"name":"Ciclo Triana",            
+        "id":"004",
+        "address":"Calle Pureza, 32, 41010 Sevilla",
+        "phone":"954332687",
+        "lat":"37.384679", 
+        "long":"-6.002451"
+	},
+	{
+		"name":"dePaseo",            
+        "id":"005",
+        "address":"Calle Virgen de Setefilla, 21, 41011 Sevilla",
+        "phone":"954283101",
+        "lat":"37.377802", 
+        "long":"-5.99891"
+        },
+	{
+		"name":"Centerbici",            
+        "id":"006",
+        "address":"Calle Espronceda, 5, 41004 Sevilla",
+        "phone":"954211044",
+        "lat":"37.390880", 
+        "long":"-5.989738"
+	},
+	{
+		"name":"Taller de Bicicletas",            
+        "id":"007",
+        "address":"Calle Recaredo 37, Local 4, 41003 Sevilla",
+        "phone":"954418546",
+        "lat":"37.391726", 
+        "long":"-5.984399"
+	},
+	{
+		"name":"Bike·Life Sevilla",            
+        "id":"008",
+        "address":"Av. de Menéndez Pelayo, 43, 41003 Sevilla",
+        "phone":"955293047",
+        "lat":"37.388385", 
+        "long":"-5.984903"
+	},
+	{
+		"name":"Reaction Bikes Sevilla",            
+        "id":"009",
+        "address":"Calle San Ignacio, 2B, 41018 Sevilla",
+        "phone":"954094492",
+        "lat":"37.386555", 
+        "long":"-5.976719"
+	},
+	{
+		"name":"Ciclo Nervión",            
+        "id":"010",
+        "address":"Calle Marqués de Pickman, 36, 41005 Sevilla",
+        "phone":"954663315",
+        "lat":"37.381180", 
+        "long":"-5.963482"
+	}
+
+]

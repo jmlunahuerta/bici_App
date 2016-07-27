@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:ng="http://angularjs.org">
 <head>
-	<!-- Use the 'title' property to render a page title  -->
+	
 	<title><%= title %></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="/lib/css/main.css" rel="stylesheet" media="screen">
@@ -9,47 +9,7 @@
 	<link href="http://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css">
 	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 	<link rel="stylesheet" href="/lib/bootstrap-3.3.6-dist/css/bootstrap.css">
-	<style>
-		
-		h1, h2, h3, h4, h5, h6 {
-			font-family: 'Arvo', Georgia, Times, serif;
-		}
-
-		p, div {
-			font-family: 'PT Sans', Helvetica, Arial, sans-serif;
-		}
-		body {
-			padding-top: 10px;
-			padding-bottom: 20px;
-			background: url(http://subtlepatterns.com/patterns/lightpaperfibers.png) repeat 0 0;
-		}
-		.container-narrow {
-			margin: 0 auto;
-			max-width: 700px;
-		}
-
-		.container-narrow > hr {
-			margin: 40px 0 0 0;
-			
-		}
-
-		.jumbotron {
-			margin: 5px 0;
-			text-align: center;
-			background-color:white;
-		}
-		.jumbotron h1 {
-			font-size: 72px;
-			line-height: 1;
-			font-weight: bold;
-		}
-		.jumbotron .btn {
-			font-size: 15px;
-			padding: 14px 24px;
-		}
-
-	}
-</style>
+	
 </head>
 <body>
 	<div class="container-narrow">
@@ -61,10 +21,10 @@
 		<h3 class="text-muted">BiciApp</h3>
 		<hr>
 		<div class="jumbotron">
-			<h1> <span class="glyphicon glyphicon-heart" style="color:#428bca;"></span> BiciApp!</h1>
+			<h1> BiciApp!</h1>
 			<p class="lead">La aplicación con todo lo que necesitas para moverte en bicicleta por Sevilla.</p>
 			<img src="/img/landing-page-bike.png" alt="">
-			<!-- Render AngularJS views  -->
+			
 			<section ng-view></section>
 			
 			<a href="https://twitter.com/BiciApp" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @BiciApp</a>
@@ -75,31 +35,43 @@
 			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
 			</script>
 			&nbsp;&nbsp;&nbsp;&nbsp;
-			<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://RealPython.com" data-text="RealPython yo -" data-size="large">Tweet</a>
+			<a href="https://twitter.com/share" class="twitter-share-button" data-url="biciApp!" data-text="Prueba la nueva app -" data-size="large">Tweet</a>
 		</div>
 
 	</div>
-	
-	
 
-	<!-- Render the user object -->
+
+
 	<script type="text/javascript">
 		window.user = <%- user || 'null' %>;
 	</script>
 
-	<!-- Load the Socket.io client -->	
-	<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDrn605l7RPadiwdzsOlRw9O28lxfYBJ6s"></script>
+	
 
-	<!-- Load local libraries -->
+
+
+
+	<script src="/lib/lodash/dist/lodash.min.js"></script>
 	<script type="text/javascript" src="/lib/angular/angular.js"></script>
 	<script type="text/javascript" src="/lib/angular-route/angular-route.js"></script>
 	<script type="text/javascript" src="/lib/angular-resource/angular-resource.js"></script>
+	<script type="text/javascript" src="/lib/angular-ui-utils/index.js"></script>
 	<script type="text/javascript" src="/lib/jquery-2.1.4.js"></script>
 	<script type="text/javascript" src="/lib/bootstrap-3.3.6-dist/js/bootstrap.js"></script>
+	<script type="text/javascript" src="/lib/ngmaps/dist/ng-map.min.js"></script>
 
+
+
+<!-- Load the bikeshops module -->
+	<script type="text/javascript" src="/bikeShops/bikeshop.client.module.js"></script>
+	<script type="text/javascript" src="/bikeShops/controllers/bikeshop.client.controller.js"></script>
+	<script type="text/javascript" src="/bikeShops/services/bikeshop.client.service.js"></script>
+	<script type="text/javascript" src="/bikeShops/config/bikeshop.client.routes.js"></script>
 
 	<!-- Load the articles module -->
-	<script type="text/javascript" src="/articles/articles.client.module.js"></script>
+
+<script type="text/javascript" src="/articles/articles.client.module.js"></script>
 	<script type="text/javascript" src="/articles/controllers/articles.client.controller.js"></script>
 	<script type="text/javascript" src="/articles/services/articles.client.service.js"></script>
 	<script type="text/javascript" src="/articles/config/articles.client.routes.js"></script>
@@ -113,13 +85,9 @@
 	<script type="text/javascript" src="/users/users.client.module.js"></script>
 	<script type="text/javascript" src="/users/services/authentication.client.service.js"></script>
 
-	<!-- Load the chat module -->
-	<script type="text/javascript" src="/chat/chat.client.module.js"></script>
-	<script type="text/javascript" src="/chat/services/socket.client.service.js"></script>
-	<script type="text/javascript" src="/chat/controllers/chat.client.controller.js"></script>
-	<script type="text/javascript" src="/chat/config/chat.client.routes.js"></script>
+	
 
-	<!-- Bootstrap AngularJS application -->
+
 	<script type="text/javascript" src="/application.js"></script>
 </body>
 </html>

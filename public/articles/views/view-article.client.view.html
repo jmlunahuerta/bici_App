@@ -1,16 +1,41 @@
-<!-- The article view -->
 <section data-ng-controller="ArticlesController" data-ng-init="findOne()">
-    <h1 data-ng-bind="article.title"></h1>
-    <!-- Show the editing buttons to the article creator -->
-    <div data-ng-show="authentication.user._id == article.creator._id">
-        <a href="/#!/articles/{{article._id}}/edit">editar</a>
-        <a href="#" data-ng-click="delete();">borrar</a>
+    <div class="page-header">
+        <h1 data-ng-bind="article.title"></h1>
     </div>
-    <small>
-        <em>Creado el</em>
-        <em data-ng-bind="article.created | date:'mediumDate'"></em>
-        <em>por</em>
+
+    <map  center="[37.391408, -5.994451]" zoom="13">
+
+      <marker position="[37.398946, -5.968450]" visible="true"></marker>
+
+  </map>
+  <div class="pull-right" data-ng-show="authentication.user._id == article.user._id">
+    <a class="btn btn-primary" href="/#!/articles/{{article._id}}/edit">
+        <i class="glyphicon glyphicon-edit"></i>
+    </a>
+    <a class="btn btn-primary" data-ng-click="delete();">
+        <i class="glyphicon glyphicon-trash"></i>
+    </a>
+</div>
+
+
+<small>
+    <em class="text-muted">
+        Creado el
+        <span data-ng-bind="article.created | date:'mediumDate'"></span>
+        por
         <em data-ng-bind="article.creator.fullName"></em>
-    </small>
-    <p data-ng-bind="article.content"></p>
-</section>
+    </em>
+</small>
+
+
+<p class="lead" data-ng-bind="article.content"></p>
+Latitud: 
+<p class="lead" data-ng-bind="article.lat"></p>
+Longitud: 
+<p class="lead" data-ng-bind="article.lon"></p>
+
+
+
+</section> 
+
+

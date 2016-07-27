@@ -1,11 +1,10 @@
 {
-	"name": "biciApp",
-	"version": "0.0.9",
-	"dependencies": {
-		"angular": "~1.2",
-		"angular-route": "~1.2",
-		"angular-resource": "~1.2"
-		//bower
-		//jquery
-	}
+  "name": "biciApp",
+  "version": "0.0.9",
+  "dependencies": {
+    "angular": "~1.2",
+    "angular-route": "~1.2",
+    "angular-resource": "~1.2",
+    "ngmap": "^1.17.3"
+  }
 }

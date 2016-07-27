@@ -1,45 +1,80 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<!-- Use the 'title' property to render a page title  -->
+	
 	<title><%= title %></title>
+	<title><%= title %></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/lib/css/signup.css" rel="stylesheet" media="screen">
+	<link href="http://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+	<link rel="stylesheet" href="/lib/bootstrap-3.3.6-dist/css/bootstrap.css">
+	<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:400,300'>
 </head>
 <body>
-  	<!-- Display flash messages  -->
+
 	<% for(var i in messages) { %>
-	   <div class="flash"><%= messages[i] %></div>
+	<div class="flash"><%= messages[i] %></div>
 	<% } %>
 
-	<!-- Render the signup form  -->
-	<form action="/signup" method="post">
-		<div>
-			<label>Nombre:</label>
-			<input type="text" name="firstName" />
-		</div>
-		<div>
-			<label>Apellidos:</label>
-			<input type="text" name="lastName" />
-		</div>
-		<div>
-			<label>Email:</label>
-			<input type="text" name="email" />
-		</div>
-		<div>
-			<label>Usuario:</label>
-			<input type="text" name="username" />
-		</div>
-		<div>	
-			<label>Contraseña:</label>
-			<input type="password" name="password" />
-		</div>
-		<div>
-			<input type="submit" value="Registrarse" />
-		</div>
-	</form>
+	
+	<div class="container">
+		<div class="row centered-form">
+			<div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">Regístrate</h3>
+					</div>
+					<div class="panel-body">
+						<form action="/signup" method="post">
+							<div class="row">
+								<div class="col-xs-6 col-sm-6 col-md-6">
+									<div class="form-group">
+										<input type="text" name="firstName"   class="form-control input-sm" class="form-control input-sm" placeholder="Nombre"/>
+									</div>
+								</div>
+								<div class="col-xs-6 col-sm-6 col-md-6">
+									<div class="form-group">
+										<input type="text" name="lastName"  class="form-control input-sm" placeholder="Apellidos"/>
+									</div>
+								</div>
+							</div>
 
-	<!-- Render the OAuth authentication links  -->
-	<a href="/oauth/facebook">Registrarse con Facebook</a>
-	<a href="/oauth/twitter">Registrarse con Twitter</a>
-	<a href="/oauth/google">Registrarse con Google</a>
+							<div class="form-group">
+								<input type="text" name="email"  class="form-control input-sm" placeholder="email"/>
+							</div>
+
+
+							<div class="form-group">
+								<input type="text" name="username"  class="form-control input-sm" placeholder="Nombre de usuario"/>
+							</div>
+
+
+							<div class="row">
+								<div class="col-xs-6 col-sm-6 col-md-6">
+									<div class="form-group">
+									<input type="password" name="password" class="form-control input-sm" placeholder="Contraseña">
+									</div>
+								</div>
+								<div class="col-xs-6 col-sm-6 col-md-6">
+									<div class="form-group">
+										<input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-sm" placeholder="Confirmar contraseña">
+									</div>
+								</div>
+							</div>
+
+							<input type="submit" value="Registrarse" class="btn btn-info btn-block">
+
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+	<script type="text/javascript" src="/lib/jquery-2.1.4.js"></script>
+	<script type="text/javascript" src="/lib/bootstrap-3.3.6-dist/js/bootstrap.js"></script>
 </body>
 </html>
